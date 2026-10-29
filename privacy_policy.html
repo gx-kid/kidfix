@@ -1,50 +1,323 @@
-                    <div class="bg-white/5 p-6 rounded-3xl border border-white/5">
-                        <i class="fas fa-link text-cyan-400 mb-4"></i>
-                        <h3 class="text-sm font-bold mb-2 uppercase">Device Pairing</h3>
-                        <p class="text-xs text-gray-500">Encrypted pairing codes via <strong>Firebase</strong> are used to securely link the Parent and Child applications.</p>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h2 class="text-xl font-black mb-4 italic uppercase tracking-tight text-white">03. App Permissions</h2>
-                <p class="text-gray-400 font-light mb-4">
-                    The KidFix Parent App requires specific permissions to function:
-                </p>
-                <ul class="space-y-3">
-                    <li class="flex items-start space-x-3 text-sm text-gray-400">
-                        <i class="fas fa-check-circle text-cyan-500 mt-1"></i>
-                        <span><strong>Notification Access:</strong> Used exclusively to deliver real-time parental alerts from the child's device.</span>
-                    </li>
-                    <li class="flex items-start space-x-3 text-sm text-gray-400">
-                        <i class="fas fa-check-circle text-cyan-500 mt-1"></i>
-                        <span><strong>Internet Access:</strong> Necessary for Firebase data synchronization and remote monitoring features.</span>
-                    </li>
-                </ul>
-            </section>
-            <section class="bg-gradient-to-br from-cyan-500/10 to-transparent p-8 rounded-[30px] border border-cyan-500/20">
-                <h2 class="text-xl font-black mb-4 italic uppercase tracking-tight text-white">04. Data Deletion</h2>
-                <p class="text-gray-400 text-sm font-light mb-6">
-                    We believe in your right to be forgotten. You can request a total wipe of your data and account at any time.
-                </p>
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div>
-                        <p class="text-[10px] text-gray-500 font-black uppercase tracking-widest mb-1">Support Email</p>
-                        <p class="text-cyan-400 font-bold">guardx.support@gmail.com</p>
-                    </div>
-                    <div class="bg-black/40 px-6 py-3 rounded-2xl border border-white/5">
-                        <p class="text-[10px] font-bold text-white uppercase">48-Hour Processing Guarantee</p>
-                    </div>
-                </div>
-            </section>
-            <section class="pt-10 border-t border-white/5 text-center">
-                <p class="text-[9px] text-gray-600 font-black uppercase tracking-[0.5em]">
-                    Developer: Sarath Chithrananda • Sri Lanka
-                </p>
-            </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | KidFix</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #020408;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 80px 24px;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 860px; margin: 0 auto; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 48px;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: #22d3ee; }
+
+        header { margin-bottom: 64px; }
+
+        header h1 {
+            font-size: clamp(48px, 10vw, 80px);
+            font-weight: 800;
+            letter-spacing: -3px;
+            font-style: italic;
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .divider-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .divider-line {
+            height: 1px;
+            width: 48px;
+            background: #22d3ee;
+        }
+
+        .subtitle {
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #6b7280;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 40px;
+            padding: 64px;
+        }
+
+        @media (max-width: 640px) {
+            .glass-card { padding: 28px; border-radius: 24px; }
+        }
+
+        section { margin-bottom: 48px; }
+        section:last-child { margin-bottom: 0; }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        .section-title.bordered {
+            border-left: 4px solid #22d3ee;
+            padding-left: 16px;
+        }
+
+        p { color: #9ca3af; font-weight: 300; font-size: 15px; margin-bottom: 12px; }
+        p:last-child { margin-bottom: 0; }
+        p strong { color: #e5e7eb; font-weight: 600; }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 640px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        .mini-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 24px;
+            padding: 24px;
+        }
+
+        .mini-card .icon {
+            font-size: 22px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .mini-card h3 {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .mini-card p {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .perm-list { list-style: none; margin-top: 12px; }
+
+        .perm-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: #9ca3af;
+            margin-bottom: 12px;
+        }
+
+        .perm-list li .check {
+            color: #22d3ee;
+            margin-top: 2px;
+            flex-shrink: 0;
+            font-size: 16px;
+        }
+
+        .perm-list li strong { color: #e5e7eb; }
+
+        .highlight-section {
+            background: linear-gradient(135deg, rgba(34,211,238,0.08), transparent);
+            border: 1px solid rgba(34,211,238,0.2);
+            border-radius: 30px;
+            padding: 32px;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        @media (min-width: 640px) {
+            .contact-row {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .email-label {
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #6b7280;
+            margin-bottom: 4px;
+        }
+
+        .email-value {
+            color: #22d3ee;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .badge {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 12px 24px;
+        }
+
+        .badge p {
+            font-size: 10px;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 0;
+        }
+
+        .divider { border: none; border-top: 1px solid rgba(255,255,255,0.05); margin: 40px 0 32px; }
+
+        .dev-credit {
+            text-align: center;
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            color: #374151;
+        }
+
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <a href="index.html" class="back-link">&#8592; Back to Home</a>
+
+    <header>
+        <h1>Privacy <span class="text-gradient">Policy.</span></h1>
+        <div class="divider-row">
+            <div class="divider-line"></div>
+            <p class="subtitle" style="margin:0;color:#6b7280;">Last Updated: October 29, 2026</p>
         </div>
-        <footer class="mt-12 text-center">
-            <p class="text-[9px] text-gray-700 font-black uppercase tracking-widest">© 2026 KidFix Systems • All Rights Reserved</p>
-        </footer>
+    </header>
+
+    <div class="glass-card">
+
+        <section>
+            <h2 class="section-title">01. Overview</h2>
+            <p>
+                Welcome to <strong>KidFix (KidFix Kids Parent Control App)</strong>. We prioritize the security of your family's data. This policy explains how our Parent Application handles information to ensure a safe monitoring environment.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title bordered">02. Data Collection</h2>
+            <div class="grid-2">
+                <div class="mini-card">
+                    <span class="icon">🛡️</span>
+                    <h3>Authentication</h3>
+                    <p>We use Google Sign-In for secure access. We only store your email address for account management.</p>
+                </div>
+                <div class="mini-card">
+                    <span class="icon">🔗</span>
+                    <h3>Device Pairing</h3>
+                    <p>Encrypted pairing codes via <strong>Firebase</strong> are used to securely link the Parent and Child applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">03. App Permissions</h2>
+            <p>The KidFix Parent App requires specific permissions to function:</p>
+            <ul class="perm-list">
+                <li>
+                    <span class="check">✓</span>
+                    <span><strong>Notification Access:</strong> Used exclusively to deliver real-time parental alerts from the child's device.</span>
+                </li>
+                <li>
+                    <span class="check">✓</span>
+                    <span><strong>Internet Access:</strong> Necessary for Firebase data synchronization and remote monitoring features.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="highlight-section">
+            <h2 class="section-title">04. Data Deletion</h2>
+            <p>We believe in your right to be forgotten. You can request a total wipe of your data and account at any time.</p>
+            <div class="contact-row">
+                <div>
+                    <p class="email-label">Support Email</p>
+                    <p class="email-value">guardx.support@gmail.com</p>
+                </div>
+                <div class="badge">
+                    <p>48-Hour Processing Guarantee</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <p class="dev-credit">Developer: Sarath Chithrananda &bull; Sri Lanka</p>
+
     </div>
+
+    <footer>
+        &copy; 2026 KidFix Systems &bull; All Rights Reserved
+    </footer>
+
+</div>
+
 </body>
 </html>
